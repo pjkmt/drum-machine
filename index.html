@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- Start Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- End Bootstrap CSS -->
+
+    <!-- Start Google Fonts Style -->
+    <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+    <!-- End Google Fonts Style -->
+
+    <!-- Start Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- End Animate CSS -->
+
+    <!-- Start Drum Machine Main External CSS File -->
+    <link rel="stylesheet" href="assets/css/drum-machine-main-css-design.css">
+    <!-- End Drum Machine Main External CSS File -->
+
+    <title>Drum Machine by PJKMT</title>
+  </head>
+  <body>
+    <h1 class="text-center">Hello, world! God Bless :-)</h1>
+    <h1 class="text-center animate__animated animate__bounce">Drum Machine by <span class="rounded border border-primary">PJKMT</span></h1>
+
+    <div class="container-fluid rounded border border-secondary col-md-5" style="background-color: #BA8C63;" id="drum-machine">
+
+        <!-- <div class="row"> -->
+            <div class="card rounded border border-secondary my-4">
+                <div class="card-body bg-dark text-white">
+                    <div id="display" class="text-center">Press The Letters on the Drum Machine to Play Sound Clip</div>
+                </div>
+            </div>
+        <!-- </div> -->
+        <div class="row my-4">
+        <!-- <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+<button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button> -->
+
+            <button class="drum-pad button col-md-3 ml-5 mr-2" id="drum-pad-1" onclick="playDrumMachineLetters('Q')">
+                <!-- <audio src="./assets/drum-sound-clip/12[kb]80s-Bdrum1.wav" id="Q" class="clip"></audio> Q -->
+                <audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/12[kb]80s-Bdrum1.wav.mp3" id="Q" class="clip"></audio> Q
+                <!-- https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/12[kb]80s-Bdrum1.wav.mp3 -->
+            </button>
+            <button class="drum-pad button col-md-3 mr-2" id="drum-pad-2" onclick="playDrumMachineLetters('W')">
+                <audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/18[kb]80s-COWBELL1.wav.mp3" id="W" class="clip"></audio> W
+            </button>
+            <button class="drum-pad button col-md-3" id="drum-pad-3" onclick="playDrumMachineLetters('E')">
+                <audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/87[kb]80s-CRASH1.wav.mp3" id="E" class="clip"></audio> E
+            </button>
+        </div>
+
+        <div class="row my-4">
+            <button class="drum-pad button col-md-3 ml-5 mr-2" id="drum-pad-4" onclick="playDrumMachineLetters('A')">
+                <audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/98[kb]80s-CRASH2.wav.mp3" id="A" class="clip"></audio> A
+            </button>
+            <button class="drum-pad button col-md-3 mr-2" id="drum-pad-5" onclick="playDrumMachineLetters('S')">
+                <audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/42[kb]80s-HHOPEN2.wav.mp3" id="S" class="clip"></audio> S
+            </button>
+            <button class="drum-pad button col-md-3" id="drum-pad-6" onclick="playDrumMachineLetters('D')">
+                <audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/13[kb]80s-HICONGA.wav.mp3" id="D" class="clip"></audio> D
+            </button>
+        </div>
+        
+        <div class="row my-4">
+            <button class="drum-pad button col-md-3 ml-5 mr-2" id="drum-pad-7" onclick="playDrumMachineLetters('Z')">
+                <audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/19[kb]80s-SNARE1.wav.mp3" id="Z" class="clip"></audio> Z
+            </button>
+            <button class="drum-pad button col-md-3 mr-2" id="drum-pad-8" onclick="playDrumMachineLetters('X')">
+                <audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/24[kb]80s-TAMB1.wav.mp3" id="X" class="clip"></audio> X
+            </button>
+            <button class="drum-pad button col-md-3" id="drum-pad-9" onclick="playDrumMachineLetters('C')">
+                <audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/19[kb]80s-TOM1.wav.mp3" id="C" class="clip"></audio> C
+            </button>
+        </div>
+
+        <div class="row mb-4">
+            <button onclick="switchOnDrumMachine()" class="btn btn-success btn-lg col-md-3 ml-5 mr-2" id="switch-on">Switch On</button>
+            <button onclick="switchOffDrumMachine()" class="btn btn-danger btn-lg col-md-3" id="switch-off">Switch Off</button>
+        </div>
+    </div>
+
+    <!-- Start Drum Machine Main JS File -->
+    <script src="assets/js/drum-machine-main-js.js"></script>
+    <!-- End Drum Machine Main JS File -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+     <!-- FreeCodeCamp CDN Link to Run the Test Environment -->
+     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+   
+  </body>
+</html>
